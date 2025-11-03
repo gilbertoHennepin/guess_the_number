@@ -16,11 +16,12 @@ def generate_secret(low, high):
 
 
 def get_guess():
-    """ get user's guess, as an integer number """
-    try:
-        return int(input('Guess the secret number?'))
-    except:
-        print('this is nota number')
+    """ get user's guess, as an integer number. Ensure user's guess is an int. """
+    while True:
+        try:
+            return int(input('Guess the secret number?'))
+        except:
+            print('this is nota number Please try again' )
         return -1
 
 
